@@ -1,54 +1,86 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const wishes = {
-        english: "May Lord Shiva bless you with health, wealth, and prosperity. Happy Maha Shivaratri!",
-        hindi: "भगवान शिव आपको स्वास्थ्य, धन और समृद्धि का आशीर्वाद दें। महा शिवरात्रि की शुभकामनाएं!",
-        malayalam: "ശിവന്റെ അനുഗ്രഹം നിങ്ങളെ ആരോഗ്യത്തിലും സമൃദ്ധിയിലും സമ്പത്തിലുമാകട്ടെ. മഹാ ശിവരാത്രി ആശംസകൾ!"
-    };
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
 
-    const mantra = {
-        english: "Om Namah Shivaya",
-        hindi: "ॐ नमः शिवाय",
-        malayalam: "ഓം നമ്പ ശിവായ"
-    };
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
 
-    const languageSelect = document.getElementById('language');
-    const userNameInput = document.getElementById('user-name');
-    const generateWishButton = document.getElementById('generate-wish');
-    const wishOutput = document.getElementById('wish-output');
-    const shareWishButton = document.getElementById('share-wish');
-    const mantraElement = document.getElementById('mantra');
-    const chantAudio = document.getElementById('chant-audio');
-    const chantButton = document.getElementById('chant-button');
-    const chantCountElement = document.getElementById('chant-count');
-    const chantNotice = document.getElementById('chant-notice');
-    let chantCount = 0;
+main {
+    padding: 20px;
+}
 
-    generateWishButton.addEventListener('click', function() {
-        const selectedLanguage = languageSelect.value;
-        const userName = userNameInput.value || "Friend";
-        wishOutput.textContent = `${wishes[selectedLanguage]} - ${userName}`;
-        mantraElement.textContent = mantra[selectedLanguage];
-    });
+section {
+    margin-bottom: 20px;
+}
 
-    shareWishButton.addEventListener('click', function() {
-        const wishText = wishOutput.textContent;
-        if (wishText) {
-            const shareUrl = `${window.location.href}?wish=${encodeURIComponent(wishText)}`;
-            navigator.share({
-                title: 'Maha Shivaratri Wish',
-                text: wishText,
-                url: shareUrl
-            });
-        } else {
-            alert('Please generate a wish first.');
-        }
-    });
+h2 {
+    color: #4CAF50;
+}
 
-    chantButton.addEventListener('click', function() {
-        chantCount++;
-        chantCountElement.textContent = chantCount;
-        if (chantCount >= 108) {
-            chantNotice.style.display = 'block';
-        }
-    });
-});
+label, select, input, button, p {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#chant-counter {
+    text-align: center;
+}
+
+.chant-center {
+    text-align: center;
+}
+
+.chant-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1.5em;
+}
+
+.chant-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.adsense-banner {
+    margin-top: 20px;
+}
