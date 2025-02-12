@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maha Shivaratri Wishes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Maha Shivaratri Wishes</h1>
+    </header>
+    <main>
+        <section id="wish-generator">
+            <h2>Generate and Share Wishes</h2>
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="malayalam">Malayalam</option>
+            </select>
+            <label for="user-name">Your Name:</label>
+            <input type="text" id="user-name" placeholder="Enter your name">
+            <button id="generate-wish">Generate Wish</button>
+            <p id="wish-output"></p>
+            <button id="share-wish">Share Wish</button>
+        </section>
+        <section id="chant-counter">
+            <h2>Chant Counter</h2>
+            <p>Mantra: <span id="mantra">Om Namah Shivaya</span></p>
+            <audio id="chant-audio" src="chant.mp3" controls></audio>
+            <button id="chant-button">Chant</button>
+            <p>Chant Count: <span id="chant-count">0</span></p>
+            <p id="chant-notice" style="display: none;">You have completed 108 chants! Great job!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Maha Shivaratri Wishes. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
