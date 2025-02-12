@@ -11,7 +11,7 @@
         <h1>Maha Shivaratri Wishes</h1>
     </header>
     <main>
-        <section id="wish-generator">
+        <section id="wish-generator" class="center-content">
             <h2>Generate and Share Wishes</h2>
             <label for="language">Select Language:</label>
             <select id="language">
@@ -25,7 +25,7 @@
             <p id="wish-output"></p>
             <button id="share-wish">Share Wish</button>
         </section>
-        <section id="chant-counter">
+        <section id="chant-counter" class="center-content">
             <h2>Chant Counter</h2>
             <p>Mantra: <span id="mantra">Om Namah Shivaya</span></p>
             <audio id="chant-audio" src="chant.mp3" controls></audio>
@@ -37,6 +37,21 @@
             </div>
             <p>Chant Count: <span id="chant-count">0</span></p>
             <p id="chant-notice" style="display: none;">You have completed 108 chants! Great job!</p>
+        </section>
+        <section id="image-banner" class="center-content">
+            <h2>Image and Ad Banner</h2>
+            <img src="your-image.png" alt="Your Image" class="centered-image">
+            <div class="adsense-banner">
+                <!-- Google AdSense Code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1234567890123456"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </section>
     </main>
     <footer>
